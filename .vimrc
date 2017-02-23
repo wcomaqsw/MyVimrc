@@ -1291,11 +1291,13 @@ function! Run()
 endfunction
 
 """""""""""""""""""
-"Quickly gdb
+"Quickly debug
 """""""""""""""""""
-map <F10> : call GDB() <CR>
-function! GDB()
+map <F10> : call DEBUG() <CR>
+function! DEBUG()
     if (&filetype == 'c') || (&filetype == 'cpp')
         execute "! gdb %<.exe"
+    if &filetype == 'python'
+        execute "! python -m pdb %"
     endif
 endfunction
