@@ -196,7 +196,8 @@
         let g:solarized_termtrans=1
         let g:solarized_contrast="normal"
         let g:solarized_visibility="normal"
-        color solarized             " Load a colorscheme
+        " color solarized             " Load a colorscheme
+        color breezy                  " Load a colorscheme
     endif
 
     set tabpagemax=15               " Only show 15 tabs
@@ -1066,7 +1067,8 @@
         " Default in terminal vim is 'dark'
         if isdirectory(expand("~/.vim/bundle/vim-airline-themes/"))
             if !exists('g:airline_theme')
-                let g:airline_theme = 'solarized'
+                " let g:airline_theme = 'solarized'
+                let g:airline_theme = 'breezy'
             endif
             if !exists('g:airline_powerline_fonts')
                 " Use the default set of separators with a few customizations
